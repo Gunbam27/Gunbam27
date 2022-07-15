@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Hover:bar_stretch</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+      .parents {
+        display: table;
+        width: 100%;
+      }
+      .wrap:hover .spacebar::after {
+        width: 100%;
+        transition: width 1.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      .child {
+        display: table-cell;
+      }
+      .hello {
+        padding-right: 20px;
+      }
+      .view {
+        padding-left: 20px;
+      }
+      .spacebar {
+        position: relative;
+        width: 60%;
+      }
+      .spacebar::before {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        top: 50%;
+        left: 0;
+        background: rgba(190, 155, 135, 0.4);
+        content: "";
+      }
+      .spacebar::after {
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        top: 50%;
+        left: 0;
+        background: rgba(140, 95, 70, 1);
+        content: "";
+        transition: width 1.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      .space-view .space-view-item:hover .pl {
+        padding-left: 20px;
+      }
+      /* END OF CODE BLOCK FOR STICKY FOOTER */
+    </style>
+  </head>
+
+  <body>
+    <div class="parents">
+      <div class="child wrap">
+        <div class="parents">
+          <div class="child hello">안녕</div>
+          <div class="child spacebar"></div>
+          <div class="child view">View</div>
+        </div>
+      </div>
+      <div class="child wrap">
+        <div class="parents">
+          <div class="child hello">안녕</div>
+          <div class="child spacebar"></div>
+          <div class="child view">View</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

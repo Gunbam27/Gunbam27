@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조약돌메뉴</title>
+</head>
+<style>
+    section{max-width: 1200px;margin:auto;}
+    .lnb{margin:auto;width: 1000px;display:flex;justify-content: space-around;}
+    .stone__container{position:relative;width: 200px;}
+    .stone__container img{width: 200px;}
+    .stone__container:nth-child(1) .bg1{
+    position: absolute;
+    width: 200px;
+    background: url(./img/stonebr1.png)no-repeat center/cover;
+    top: 3%;
+    left: 8%;
+    right: 12%;
+    bottom: 3%;
+    z-index: -1;
+    animation: rotateInf 2.4s linear infinite;
+    }
+    .stone__container:nth-child(2) .bg1{
+    position: absolute;
+    width: 200px;
+    background: url(./img/stonebr2.png)no-repeat center/cover;
+    top: 3%;
+    left: 8%;
+    right: 12%;
+    bottom: 3%;
+    z-index: -1;
+    animation: rotateInf 2.4s linear infinite;
+    }
+    .stone__container:nth-child(3) .bg1{
+    position: absolute;
+    width: 200px;
+    background: url(./img/stonebr3.png)no-repeat center/cover;
+    top: 3%;
+    left: 8%;
+    right: 12%;
+    bottom: 3%;
+    z-index: -1;
+    animation: rotateInf 2.4s linear infinite;
+    }
+    .stone__container:nth-child(4) .bg1{
+    position: absolute;
+    width: 200px;
+    background: url(./img/stonebr4.png)no-repeat center/cover;
+    top: 3%;
+    left: 8%;
+    right: 12%;
+    bottom: 3%;
+    z-index: -1;
+    animation: rotateInf 2.4s linear infinite;
+    }
+    /* 두번째 배경 */
+    .stone__container:nth-child(1) .bg2{
+    position: absolute;
+    width: 200px;
+    background: url(./img/stonebr1.png)no-repeat center/cover;
+    top: 3%;
+    left: -8%;
+    right: 12%;
+    bottom: 3%;
+    z-index: -1;
+    animation: rotateInf 2.4s linear infinite;
+    }
+    .stone__container:nth-child(2) .bg2{
+    position: absolute;
+    width: 200px;
+    background: url(./img/stonebr2.png)no-repeat center/cover;
+    top: 3%;
+    left: -8%;
+    right: 12%;
+    bottom: 3%;
+    z-index: -1;
+    animation: rotateInf 2.4s linear infinite;
+    }
+    .stone__container:nth-child(3) .bg2{
+    position: absolute;
+    width: 200px;
+    background: url(./img/stonebr3.png)no-repeat center/cover;
+    top: 3%;
+    left: -8%;
+    right: 12%;
+    bottom: 3%;
+    z-index: -1;
+    animation: rotateInf 2.4s linear infinite;
+    }
+    .stone__container:nth-child(4) .bg2{
+    position: absolute;
+    width: 200px;
+    background: url(./img/stonebr4.png)no-repeat center/cover;
+    top: 3%;
+    left: -8%;
+    right: 12%;
+    bottom: 3%;
+    z-index: -1;
+    animation: rotateInf 2.4s linear infinite;
+    }
+    /* 세번째배경 */
+    .stone__container:nth-child(1) .bg3{
+    position: absolute;
+    width: 200px;
+    background: url(./img/stonebr1.png)no-repeat center/cover;
+    top: 3%;
+    left: -8%;
+    right: 12%;
+    bottom: 3%;
+    z-index: -1;
+    animation: rotateInf 2.4s linear infinite;
+    }
+
+    @keyframes rotateInf {
+    0%{
+    transform: rotate(0deg);
+    }
+    50% {
+    transform: rotate(10deg);
+    }
+    100% {
+    transform: rotate(0deg);
+    }
+}
+</style>
+<body>
+    <section>
+      <div class="lnb">
+        <div class="stone__container">
+            <img src="./img/stone1.png" alt="돌"/>
+            <div class="bg1"></div>
+            <div class="bg2"></div>
+            <div class="bg3"></div>
+        </div>
+        <div class="stone__container">
+            <img src="./img/stone2.png" alt="돌"/>
+            <div class="bg1"></div>
+            <div class="bg2"></div>
+        </div>
+        <div class="stone__container">
+            <img src="./img/stone3.png" alt="돌"/>
+            <div class="bg1"></div>
+            <div class="bg2"></div>
+        </div>
+        <div class="stone__container">
+            <img src="./img/stone4.png" alt="돌"/>
+            <div class="bg1"></div>
+            <div class="bg2"></div>
+      </div>
+    </section>
+</body>
+</html>

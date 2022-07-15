@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+    .visual_deco01 {
+    top: 173px;
+    left: 196px;
+    width: 89px;
+    height: 85px;
+    animation: upDown 3s ease-in-out infinite;
+    background-image:url("http://www.updrive.co.kr/wp-content/themes/updrive/images/ico/ico_visual_deco01.png");
+    }
+    .visual_deco02 {
+    top: 173px;
+    left: 500px;
+    width: 89px;
+    height: 85px;
+    animation: circleMode01 6s ease-in-out infinite;
+    background-image:url("http://www.updrive.co.kr/wp-content/themes/updrive/images/ico/ico_visual_deco03.png");
+    }
+    .visual [class^="visual_deco0"] {
+        position: absolute;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100%;
+        transition: all .3s ease;
+    }
+    .visual [class^="visual_deco0"] {
+      @keyframes circleMode01 {
+        0%{top: 173px;}
+        50%{top:120px;}
+        100%{top:173px;}        
+      }
+      @keyframes upDown {
+        0%{transform: rotate(0deg)}
+        50%{transform: rotate(120deg)}
+        100%{transform: rotate(0deg)}        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="visual">
+      <div class="visual_deco01"></div>
+      <div class="visual_deco02"></div>
+    </div>
+  </body>
+</html>
