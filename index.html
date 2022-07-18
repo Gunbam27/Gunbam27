@@ -6,75 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .bubbles{width:100%;height:100%;overflow: hidden;top: 0;left:0;}
-        .bubble{position:absolute;bottom:-100px;border-radius: 50%;opacity: 0.5;}
-        .blue{background: #c2e9fa;}
-        .pink{background: #FEC8C6;}
-        .yellow{background: #ffeeb3;}
-        .w90px{width:90px;height:90px;}
-        .w70px{width:70px;height:70px;}
-        .w50px{width:50px;height:50px;}
-        .w30px{width:30px;height:30px;}
-        .w10px{width:10px;height:10px;}
-        .left90{left:90%;}
-        .left80{left:80%;}
-        .left70{left:70%;}
-        .left60{left:60%;}
-        .left50{left:50%;}
-        .left40{left:40%;}
-        .left30{left:30%;}
-        .left20{left:20%;}
-        .left10{left:10%;}
-        .left2{left:2%;}
-        .delay1{animation: rise 10s infinite ease-in;animation-duration: 8s;animation-delay: 2s;}
-        .delay2{animation: rise 10s infinite ease-in;animation-duration: 5s;animation-delay: 1s;}
-        .delay3{animation: rise 10s infinite ease-in;animation-duration: 7s;animation-delay: 5s;}
-        .delay4{animation: rise 10s infinite ease-in;animation-duration: 3s;}
-        .delay5{animation: rise2 10s infinite ease-in;animation-duration: 2s;animation-delay: 2s;}
-        .delay6{animation: rise2 10s infinite ease-in;animation-duration: 4s;animation-delay: 1s;}
-        .delay7{animation: rise2 10s infinite ease-in;animation-duration: 6s;}
-        @keyframes rise {
-            0%{bottom:-100px;transform:translateX(0);}
-            50%{transform:translateX(100px);}
-            100%{bottom:1400px;transform:translateX(-50px);}
+        section{width: 100%;height: 100vh;position: relative;}
+        .col-ani-wrap{
+        z-index: -99;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+        position: relative;}
+        .col-ani:nth-of-type(1) {transition-delay: 0.65s;}
+        .col-ani:nth-of-type(2) {transition-delay: 0.5s;}
+        .col-ani:nth-of-type(3) {transition-delay: 0.35s;}
+        .col-ani:nth-of-type(4) {transition-delay: 0.2s;}
+        .col-ani:nth-of-type(5) {transition-delay: 0.1s;}
+        .col-ani{
+        background: #F4F4F4;
+        width: 25%;
+        height: 100%;
+        position: relative;
+        transition: 0.9s cubic-bezier(0.1, 1.04, 1, 1);
+        top: -100%;
         }
-        @keyframes rise2 {
-            0%{bottom:-100px;transform:translateX(0);}
-            50%{transform:translateX(50px);}
-            100%{bottom:1400px;transform:translateX(-20px);}
+        .hidden_menu{
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        background-color: #F4F4F4;
+        transition: 0.3s;
+        opacity: 0;
+        position: absolute;
+        /* z-index: -10; */
+        display: flex;
+        align-items: center;
         }
+        .col-anitogle{top:0;}
+        .btn{width:50px;height: 50px;background: white;border:none;position: relative;left: 90%;cursor: pointer;}
+        .hidden_menu .hi_list{width: 60%;}
+        .square-box{width:20px;display:flex;flex-direction: row;flex-wrap: wrap;margin:auto;}
+        .square{width:8px;height:8px;margin:1px 1px;background: black;}
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const hambtn = document.querySelector('.btn');
+            
+            hambtn.addEventListener("click", ()=>{
+                test();
+                })             
+        })
+        function test(){
+            const colani = document.querySelectorAll('.col-ani');
+            for(let i=0;i < colani.length;i++){
+                colani[i].classList.toggle('col-anitogle');
+            }
+        }
+    </script>
 </head>
 <body>
-    <section class="bubbles">
-        <div class="bubble blue w90px left10 delay1"></div>
-        <div class="bubble blue w50px left80 delay5"></div>
-        <div class="bubble blue w30px left60 delay4"></div>
-        <div class="bubble blue w70px left50 delay2"></div>
-        <div class="bubble blue w10px left20 delay1"></div>
-        <div class="bubble blue w70px left30 delay6"></div>
-        <div class="bubble blue w20px left70 delay4"></div>
-        <div class="bubble blue w40px left40 delay5"></div>
-        <!-- 10개 -->
-        <div class="bubble pink w50px left60 delay2"></div>
-        <div class="bubble pink w70px left80 delay5"></div>
-        <div class="bubble pink w90px left20 delay1"></div>
-        <div class="bubble pink w10px left30 delay5"></div>
-        <div class="bubble pink w30px left50 delay3"></div>
-        <div class="bubble pink w30px left70 delay1"></div>
-        <div class="bubble pink w80px left70 delay2"></div>
-        <div class="bubble pink w30px left40 delay6"></div>
-        <!-- 10개 -->
-        <div class="bubble yellow w40px left2 delay3"></div>
-        <div class="bubble yellow w70px left40 delay1"></div>
-        <div class="bubble yellow w10px left20 delay2"></div>
-        <div class="bubble yellow w30px left70 delay3"></div>
-        <div class="bubble yellow w50px left80 delay6"></div>
-        <div class="bubble yellow w90px left60 delay4"></div>
-        <div class="bubble yellow w40px left10 delay5"></div>
-        <div class="bubble yellow w20px left30 delay7"></div>
-        <div class="bubble yellow w80px left80 delay2"></div>
-        <!-- 10개 -->
+    <section>
+        <button type="button" id="ham" class="btn">
+            <div class="square-box">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+            
+        </button>
+        <div class="col-ani-wrap">
+            <div class="col-ani"></div>
+            <div class="col-ani"></div>
+            <div class="col-ani"></div>
+            <div class="col-ani"></div>
+            <div class="col-ani"></div>
+            <div class="hidden_menu">
+                <div>1</div>
+                <ul>
+                    <li>About</li>
+                    <li>Projects</li>
+                    <li>Contact</li>
+                    <li>Guide</li>
+                </ul>
+            </div>
+        </div>
     </section>
 </body>
 </html>
