@@ -1,0 +1,108 @@
+<header id="header">
+    <div class="header container">
+      <div class="head_utils"></div>
+    </div>
+    <nav class="main_menu container">
+      <ul class="gnb">
+        <li><a href="#" rel="sub1">학회소개</a></li>
+        <li><a href="#" rel="sub2">회원공간</a></li>
+        <li><a href="#" rel="sub3">간행물</a></li>
+        <li><a href="#" rel="sub4">학술대회</a></li>
+        <li><a href="#" rel="sub5">게시판</a></li>
+        <li><a href="#" rel="sub6">관련사이트</a></li>
+      </ul>
+    </nav>
+    <div class="wrap_gnb_sub">
+      <div class="inner container">
+        <div class="gnb_sub">
+          <a href="#">회장인사말</a>
+          <a href="#">역대회장단</a>
+          <a href="#">역대학회상수상자</a>
+          <a href="#">연혁</a>
+          <a href="#">임원진명단</a>
+          <a href="#">회칙</a>
+          <a href="#">규정</a>
+        </div>
+        <div class="gnb_sub">
+          <a href="#">회원안내</a>
+          <a href="#">회원가입</a>
+          <a href="#">회원정보수정</a>
+          <a href="#">회원검색</a>
+          <a href="#">기업회원사</a>
+          <a href="#">특별회원사</a>
+          <a href="#">온라인전자결제</a>
+        </div>
+        <div class="gnb_sub">
+          <a href="#">JKWST</a>
+          <a href="#">학술대회</a>
+          <a href="#">연구보고서</a>
+          <a href="#">서적</a>
+          <a href="#">기타세미나</a>
+        </div>
+      </div>
+    </div>
+    <!-- gnb -->
+  </header>
+  <!-- header -->
+  
+  <style>
+    #header .main_menu .gnb {
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+    }
+    #header .main_menu .gnb li {
+      background: pink;
+      list-style: none;
+      width: 16%;
+      font-size: 19px;
+      font-weight: 500;
+      box-sizing: border-box;
+      text-align: center;
+      padding: 0.7rem 0;
+    }
+    #header .main_menu .gnb li a::hover .wrap_gnb_sub {
+      display: block;
+    }
+    #header .wrap_gnb_sub {
+      display: flex;
+      justify-content: center;
+      background: var(--bright-grey);
+    }
+    #header .wrap_gnb_sub {
+      display: none;
+      position: absolute;
+      z-index: 10;
+    }
+    #header.wrap_gnb_sub .inner {
+      display: flex;
+      justify-content: center;
+    }
+    #header.wrap_gnb_sub .inner .gnb_sub {
+      display: flex;
+      flex-direction: column;
+      width: 16%;
+      padding: 1.5rem 0;
+      text-align: center;
+      align-self: stretch;
+    }
+
+  </style>
+  <script>
+    const mainMenu = document.querySelectorAll(".main_menu > .gnb > li");
+    const gnb = document.querySelector('.wrap_gnb_sub')
+
+    mainMenu.forEach(el=>{
+        el.addEventListener("mouseenter", () => {
+            openCloseToc()
+        });
+
+        el.addEventListener("mouseleave", () =>{
+            openCloseToc()
+        });
+    });
+
+    function openCloseToc() {
+        gnb.style.display === 'block' ? gnb.style.display='none' : gnb.style.display='block';
+    }
+  </script>
