@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0;list-style:none;text-decoration:none;color:#222}
+
+        .tabs {display:flex;width:100%}
+        .tabs li{flex:1 0 auto;}
+        .tabs li a{display:flex;width:100%;align-items: center;justify-content: center;line-height:50px;background:#fff;color:#222;box-sizing:border-box;}
+        .tabs li a[aria-tab="true"]{background:tomato;color:#fff}
+        .tab_con .con{width:100%;height:500px;background:tomato;padding:20px;box-sizing:border-box}
+        .tab_con .con[aria-con="flase"]{display:none;}
+        .tab_con .con[aria-con="true"]{display:block;}
+    </style>
+    
+</head>
+<body>
+    <div id="tab_wrap">
+        <ul class="tabs">
+          <li class="tab">
+            <a href="#" aria-tab="true">tab01</a>
+          </li>
+          <li class="tab">
+            <a href="#" aria-tab="flase">tab02</a>
+          </li>
+          <li class="tab">
+            <a href="#" aria-tab="flase">tab03</a>
+          </li>
+          <li class="tab">
+            <a href="#" aria-tab="flase">tab04</a>
+          </li>
+          <li class="tab">
+            <a href="#" aria-tab="flase">tab05</a>
+          </li>
+        </ul>
+        <div class="tab_con">
+          <div class="con" id="tab01" aria-con="true">1</div>
+          <div class="con" id="tab02" aria-con="flase">2</div>
+          <div class="con" id="tab03" aria-con="flase">3</div>
+          <div class="con" id="tab04" aria-con="flase">4</div>
+          <div class="con" id="tab04" aria-con="flase">5</div>
+        </div>
+      </div>
+      <script>
+        const tabs = document.querySelectorAll('.tab > a');
+        const cons = document.querySelectorAll('.con');
+
+        tabs.forEach((el,index)=>{
+            el.addEventListener('click',e=>{
+            for(tab of tabs) tab.setAttribute('aria-tab','flase')
+            for(con of cons) con.setAttribute('aria-con','flase')
+            el.setAttribute('aria-tab','true');
+            cons[index].setAttribute('aria-con','true');
+            })
+        })
+
+    </script>
+</body>
+</html>

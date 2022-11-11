@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <style>
+      @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+      body {
+        background: black;
+        height: 6000px;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+
+      #app div.item {
+        margin-top: 1000px;
+        color: white;
+        text-align: center;
+        opacity: 0;
+        transition: all 1s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="item"><h1>Lorem Ipsum</h1></div>
+      <div class="item">
+        <h1>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </h1>
+      </div>
+      <div class="item">
+        <h1>
+          Lorem Ipsum has been the industry's standard dummy text ever since the
+          1500s.
+        </h1>
+      </div>
+      <div class="item">
+        <h1>
+          It has survived not only five centuries, but also the leap into
+          electronic typesetting, remaining essentially unchanged.
+        </h1>
+      </div>
+    </div>
+
+    <script>
+      let dive = document.querySelectorAll(".item");
+      console.log(dive);
+ 
+      let observer = new IntersectionObserver((e) => {
+        e.forEach((box) => {
+          if (box.isIntersecting) {
+            box.target.style.opacity = 1;
+          } else {
+            box.target.style.opacity = 0;
+          }
+        });
+      });
+        observer.observe(dive[0]);
+        observer.observe(dive[1]);
+        observer.observe(dive[2]);
+        observer.observe(dive[3]);
+    </script>
+  </body>
+</html>
