@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GSAP</title>
+    <!-- CDN -->
+    <<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+    .svg {
+        width: 500px;
+        height: 500px;
+        background-color: #eee;
+    }
+</style>
+</head>
+<body>
+    <svg class="svg">
+        <defs>
+            <mask id="mask-circle">
+                <circle cx="400" cy="100" r="100" fill="#fff"></circle>
+            </mask>
+        </defs>
+        <g mask="url(#mask-circle)">
+            <text x="20" y="100" fill="crimson">
+                Hello, everybody!!!!! This is SVG learning time!!!!!!!!
+            </text>
+        </g>
+    </svg>
+<script>
+
+</script>
+</body>
+</html>
