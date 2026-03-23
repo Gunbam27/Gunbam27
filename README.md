@@ -1,4 +1,4 @@
-# 👋 Frontend Developer 신예진
+## 신예진 | Frontend Developer
 
 사용자 경험과 데이터 흐름을 함께 고민하며,
 실제 서비스에서 발생하는 문제를 해결해온 프론트엔드 개발자입니다.
@@ -7,9 +7,9 @@
 
 ---
 
-## 🚀 Projects
+### 🚀 Projects
 
-### 🛒 커머스 플랫폼 PORTSTYLE(포트스타일)
+#### 🛒 커머스 플랫폼 PORTSTYLE(포트스타일)
 
 Next.js + NestJS 기반 이커머스 서비스
 
@@ -18,13 +18,15 @@ Next.js + NestJS 기반 이커머스 서비스
 * data / repository / impl 구조로 관심사를 분리하여 유지보수성을 고려한 설계
 * 상품, 주문, 사용자 중심으로 DB 스키마 설계
 * OpenAPI 기반 타입 공유로 프론트-백엔드 간 불일치 해결
+* Vitest 기반 커스텀 훅 및 API 연동 테스트 작성
+* GitHub Actions 기반 CI 환경 구축 및 테스트 통과 시에만 Vercel 배포되도록 설정
 
 👉 코드 보기: [https://github.com/Gunbam27/commerce](https://github.com/Gunbam27/commerce)     
 👉 사이트 보기: [portstyle.shop](https://portstyle.shop)
 
 ---
 
-### 🐹 캐릭터 에디터 DecoMe (데코미)
+#### 🐹 캐릭터 에디터 DecoMe (데코미)
 
 친구가 생각하는 나를 캐릭터로 만들어주는 참여형 웹 서비스
 
@@ -37,7 +39,7 @@ Next.js + NestJS 기반 이커머스 서비스
 
 ---
 
-### ✈️ 외국인을 위한 여행앱 Kovel (코블)
+#### ✈️ 외국인을 위한 여행앱 Kovel (코블)
 
 외국인을 위한 한국 여행 정보 제공 어플
 
@@ -51,7 +53,7 @@ Next.js + NestJS 기반 이커머스 서비스
 
 ---
 
-## 🧩 Tech Stack
+### 🧩 Tech Stack
 
 **Frontend**
 
@@ -67,7 +69,7 @@ Next.js + NestJS 기반 이커머스 서비스
 
 ---
 
-## 🧠 What I Focus On
+### 🧠 What I Focus On
 
 * 기능 구현보다 **문제 해결 과정과 구조 설계**
 * 사용자 흐름을 고려한 **UX 중심 개발**
@@ -75,7 +77,7 @@ Next.js + NestJS 기반 이커머스 서비스
 
 ---
 
-## 📫 Contact
+### 📫 Contact
 
 * Email: [mingmi_27@naver.com](mailto:mingmi_27@naver.com)
 * GitHub: https://github.com/Gunbam27
