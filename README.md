@@ -15,7 +15,7 @@ Next.js + NestJS 기반 이커머스 서비스
 
 * Turborepo 기반 모노레포 구조로 프론트/백엔드 통합 관리
 * JWT 기반 인증 흐름을 설계하고 토큰 재발급 구조를 적용
-* data / repository / impl 구조로 관심사를 분리하여 유지보수성을 고려한 설계
+* NestJS 기반의 Controller-Service 계층 구조(3-Tier Architecture)를 적용. Prisma ORM을 활용하여 데이터 접근
 * 상품, 주문, 사용자 중심으로 DB 스키마 설계
 * OpenAPI 기반 타입 공유로 프론트-백엔드 간 불일치 해결
 * Vitest 기반 커스텀 훅 및 API 연동 테스트 작성
